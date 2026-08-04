@@ -43,22 +43,20 @@ function SignIn() {
       }}
     >
       <h2>Sign In</h2>
-      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "12px" ,backgroundColor:"black",padding:"20px",borderRadius:"5px"}}>
+      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "12px",padding:"20px",borderRadius:"5px"}}>
         <div style={{ marginBottom: "12px" ,padding:"10px",borderRadius:"5px"}}> 
-         <label style={{ display: "block", marginBottom: "6px" ,color:"white" }}>Name:</label>
+         <label style={{ display: "block", marginBottom: "6px"  }}>Name:</label>
          <input type="text" value={name} onChange={(e)=>setName(e.target.value)} style={{ padding: "8px", width: "250px" }} />
          
          
-          <label style={{ display: "block", marginBottom: "6px",color:"white" }}>Email:</label>
+          <label style={{ display: "block", marginBottom: "6px" }}>Email:</label>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             style={{ padding: "8px", width: "250px" }}
           />
-        </div>
-        <div style={{ marginBottom: "16px" }}>
-          <label style={{ display: "block", marginBottom: "6px",color:"white" }}>Password:</label>
+           <label style={{ display: "block", marginBottom: "6px",}}>Password:</label>
           <input
             type="password"
             value={password}
@@ -66,6 +64,7 @@ function SignIn() {
             style={{ padding: "8px", width: "250px" }}
           />
         </div>
+       
         <button
           type="submit"
           style={{
@@ -80,9 +79,9 @@ function SignIn() {
           Sign In
         </button>
         
-            <Link to="/login" style={{ color: "grey", textDecoration: "none", marginTop: "10px" }}>
+            <a href="/login" style={{ color: "white", textDecoration: "none", marginTop: "10px",hover:{color:"blue"}}}>
               Already have an account? Log in
-            </Link>
+            </a>
         
       </form>
     </div>

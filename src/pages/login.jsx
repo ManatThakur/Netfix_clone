@@ -48,12 +48,12 @@ function Login() {
           display: "flex",
           flexDirection: "column",
           gap: "12px",
-          backgroundColor: "black",
+        
           padding: "20px",
           borderRadius: "5px",
         }}
       >
-        <label style={{ color: "white" }}>Email</label>
+        <label >Email</label>
 
         <input
           type="email"
@@ -62,7 +62,7 @@ function Login() {
           style={{ padding: "8px", width: "250px" }}
         />
 
-        <label style={{ color: "white" }}>Password</label>
+        <label >Password</label>
 
         <input
           type="password"
