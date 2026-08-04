@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { Link } from "react-router-dom";
 import { auth } from "../firebase/firebase";
 
 function SignIn() {
@@ -79,9 +80,9 @@ function SignIn() {
           Sign In
         </button>
         
-            <a href="/login" style={{ color: "grey", textDecoration: "none", marginTop: "10px",hover:{color:"blue"}}}>
+            <Link to="/login" style={{ color: "grey", textDecoration: "none", marginTop: "10px" }}>
               Already have an account? Log in
-            </a>
+            </Link>
         
       </form>
     </div>

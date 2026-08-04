@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 // ================= NAVBAR =================
 
 export function Navbar({ user, onLogout }) {
@@ -19,13 +19,19 @@ export function Navbar({ user, onLogout }) {
       <h1 style={{ color: "red", fontSize: "35px" }}>NETFLIX</h1>
 
       <div style={{ display: "flex", gap: "20px" }}>
-        <a href="/" style={{ color: "white", textDecoration: "none" }}>
-          Home
-        </a>
+        <Link
+  to="/profile"
+  style={{ color: "white", textDecoration: "none" }}
+>
+  Profile
+</Link>
+<Link
+  to="/home"
+  style={{ color: "white", textDecoration: "none" }}
+>
+  Home
+</Link>
 
-        <a href="/profile" style={{ color: "white", textDecoration: "none" }}>
-          Profile
-        </a>
 
         {user && (
           <button
