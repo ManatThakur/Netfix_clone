@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // ================= NAVBAR =================
 
 export function Navbar({ user, onLogout }) {
@@ -98,12 +98,15 @@ export function Hero() {
 // ================= MOVIE CARD =================
 
 export function MovieCard({ movie }) {
+  const navigate = useNavigate();
+
   const imageUrl = movie.poster_path
     ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-    : "https://via.placeholder.com/200x300?text=No+Image";
+    : "https://via.placeholder.com/200x300";
 
   return (
     <div
+      onClick={() => navigate(`/movie/${movie.id}`)}
       style={{
         width: "200px",
         margin: "10px",
@@ -129,7 +132,6 @@ export function MovieCard({ movie }) {
     </div>
   );
 }
-
 // ================= MOVIE ROW =================
 
 export function MovieRow({ title, movies }) {

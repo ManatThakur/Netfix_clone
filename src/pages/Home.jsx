@@ -68,7 +68,7 @@ function Home() {
           {error}
         </div>
       ) : (
-        <MovieRow title="Trending Movies" movies={filteredMovies} />
+        <MovieRow title="Trending Movies" movies={filteredMovies} onclick="" />
       )}
       <Footer />
     </>
